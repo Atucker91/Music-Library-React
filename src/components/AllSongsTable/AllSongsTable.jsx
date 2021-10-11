@@ -4,13 +4,13 @@ const AllSongsTable = (props) => {
     return ( 
         <div>
             {/* <input type='text' id='myInput' onKeyUp={props.filterList} placeholder='filter by title, artist, album, date, genre'></input> */}
-            <table id='myTable'>
+            <table id='filterTable'>
                 <tr>
-                    <th>Title</th>
-                    <th>Artist</th>
-                    <th>Album</th>
-                    <th>Release Date</th>
-                    <th>Genre</th>
+                    <th onClick={() => props.filterTable(0)}>Title</th>
+                    <th onClick={() => props.filterTable(1)}>Artist</th>
+                    <th onClick={() => props.filterTable(2)}>Album</th>
+                    <th onClick={() => props.filterTable(3)}>Release Date</th>
+                    <th onClick={() => props.filterTable(4)}>Genre</th>
                     <th>Delete</th>
                 </tr>
                 
