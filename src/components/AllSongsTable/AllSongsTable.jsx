@@ -4,7 +4,7 @@ const AllSongsTable = (props) => {
     return ( 
         <div>
             {/* <input type='text' id='myInput' onKeyUp={props.filterList} placeholder='filter by title, artist, album, date, genre'></input> */}
-            <table id='filterTable'>
+            <table id='filterTable' className='table'>
                 <tr>
                     <th onClick={() => props.filterTable(0)}>Title</th>
                     <th onClick={() => props.filterTable(1)}>Artist</th>

@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import AllSongsTable from './components/AllSongsTable/AllSongsTable';
 import CreateNewSongForm from './components/CreatNewSongForm/CreateNewSongForm';
 import TableSearchBar from './components/TableSearchBar/TableSearchBar';
+import './App.css'
 
 class App extends Component {
     constructor(props) {
@@ -65,7 +66,7 @@ class App extends Component {
         
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
+        table = document.getElementById("filterTable");
         tr = table.getElementsByTagName("tr");
 
         console.log(table);
@@ -144,11 +145,15 @@ class App extends Component {
 
     render() { 
         return ( 
-            <div>
-                <h1>Hello</h1>
-                <TableSearchBar searchBar={this.searchBar} />
-                <AllSongsTable songList={this.state.songs} deleteSong={this.deleteSong} filterTable={this.filterTable} />
-                <CreateNewSongForm createNewSong={this.createSong} />
+            <div className="row">
+                <div className="col-md-2"></div>
+                <div className="col-md-8">
+                    <h1>Hello</h1>
+                    <TableSearchBar searchBar={this.searchBar} />
+                    <CreateNewSongForm createNewSong={this.createSong} />
+                    <AllSongsTable songList={this.state.songs} deleteSong={this.deleteSong} filterTable={this.filterTable} />
+                </div>
+                <div className="col-md-2"></div>
             </div>
          );
     }
