@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import AllSongsTable from './components/AllSongsTable/AllSongsTable';
 import CreateNewSongForm from './components/CreatNewSongForm/CreateNewSongForm';
 import TableSearchBar from './components/TableSearchBar/TableSearchBar';
+import Footer from './components/Footer/Footer';
 import './App.css'
 
 class App extends Component {
@@ -145,15 +146,18 @@ class App extends Component {
 
     render() { 
         return ( 
-            <div className="row">
-                <div className="col-md-2"></div>
-                <div className="col-md-8">
-                    <h1>Hello</h1>
-                    <TableSearchBar searchBar={this.searchBar} />
-                    <CreateNewSongForm createNewSong={this.createSong} />
-                    <AllSongsTable songList={this.state.songs} deleteSong={this.deleteSong} filterTable={this.filterTable} />
+            <div>
+                <div className="row">
+                    <div className="col-sm-1 col-md-2 col-xl-2 ml-background"></div>
+                    <div className="col-sm-10 col-md-8 col-xl-8">
+                        <h1 class="ml-h1">Music Library</h1>
+                        <TableSearchBar searchBar={this.searchBar} />
+                        <CreateNewSongForm createNewSong={this.createSong} />
+                        <AllSongsTable songList={this.state.songs} deleteSong={this.deleteSong} filterTable={this.filterTable} />
+                        <Footer />
+                    </div>
+                    <div className="col-sm-1 col-md-2 col-xl-2 ml-background"></div>
                 </div>
-                <div className="col-md-2"></div>
             </div>
          );
     }
