@@ -1,3 +1,12 @@
-.search-bar {
-  text-align: center;
+.container {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  font-family: proxima-nova;
+  font-size: large;
+}
+
+.ml-row {
+  background-color: grey;
+  padding-top: 10px;
+  border: 2px solid black;
 }

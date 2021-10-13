@@ -5,6 +5,9 @@ import CreateNewSongForm from './components/CreatNewSongForm/CreateNewSongForm';
 import TableSearchBar from './components/TableSearchBar/TableSearchBar';
 import Footer from './components/Footer/Footer';
 import './App.css'
+import img from './TOS2.png'
+import img2 from './TOSR.png'
+import img3 from './TOSL.png'
 
 class App extends Component {
     constructor(props) {
@@ -148,15 +151,20 @@ class App extends Component {
         return ( 
             <div>
                 <div className="row">
-                    <div className="col-sm-1 col-md-2 col-xl-2 ml-background"></div>
-                    <div className="col-sm-10 col-md-8 col-xl-8">
-                        <h1 class="ml-h1">Music Library</h1>
+                     <div className="col-sm-1 col-md-2 col-xl-2 nopadding">
+                     <img src={img3} alt="Dwyer" height='100%' width='100%'/>
+                     </div>
+                    <div className="col-sm-10 col-md-8 col-xl-8 ml-background2 shadow-lg ">
                         <TableSearchBar searchBar={this.searchBar} />
                         <CreateNewSongForm createNewSong={this.createSong} />
-                        <AllSongsTable songList={this.state.songs} deleteSong={this.deleteSong} filterTable={this.filterTable} />
-                        <Footer />
+                        <AllSongsTable songList={this.state.songs} deleteSong={this.deleteSong} filterTable={this.filterTable} />    
                     </div>
-                    <div className="col-sm-1 col-md-2 col-xl-2 ml-background"></div>
+                    <div className="col-sm-1 col-md-2 col-xl-2 nopadding">
+                    <img src={img2} alt="Dwyer" height='100%' width='100%'/>
+                    </div>
+                </div>
+                <div className="row">
+                    <Footer />
                 </div>
             </div>
          );

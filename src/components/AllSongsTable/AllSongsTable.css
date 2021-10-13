@@ -1,6 +1,6 @@
 .my-custom-scrollbar {
   position: relative;
-  height: 300px;
+  height: 500px;
   overflow: auto;
 }
 
@@ -28,4 +28,15 @@
 .table tbody {
   color: grey;
   background: black;
+}
+
+.button1 {
+  transition-duration: 0.4s;
+  background-color: #e7e7e7;
+  color: whitesmoke;
+}
+
+.button1:hover {
+  background-color: gray;
+  color: black;
 }
